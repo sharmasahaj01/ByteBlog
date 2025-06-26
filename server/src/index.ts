@@ -4,6 +4,7 @@ import { PrismaClient } from '@prisma/client/extension';
 import { decode, sign, verify } from 'hono/jwt'
 import { userRouter } from './Routes/user';
 import { blogRouter } from './Routes/blog';
+
 const app = new Hono<{
   Bindings: {
     DATABASE_URL: string;

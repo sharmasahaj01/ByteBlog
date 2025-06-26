@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { withAccelerate } from '@prisma/extension-accelerate';
-import { PrismaClient } from '@prisma/client/extension'; 
+import { PrismaClient } from '@prisma/client/edge';
 import { decode, sign, verify } from 'hono/jwt'
 import { signupInput, signinInput } from '@sahajsharma01/bb-common';
 
@@ -16,7 +16,7 @@ userRouter.post('/signup', async (c) => {
   const { success } = signupInput.safeParse(body);
   if(!success){
     c.status(411)
-    c.json({
+    return c.json({
         msg:"Inputs are not correct"
     })
   }  

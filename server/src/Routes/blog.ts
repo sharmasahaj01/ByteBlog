@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client/extension";
+import { PrismaClient } from '@prisma/client/extension';
 import { Hono } from "hono";
 import { withAccelerate } from '@prisma/extension-accelerate';
 import { decode, sign, verify } from 'hono/jwt'
