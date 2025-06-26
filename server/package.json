@@ -1,17 +1,19 @@
 {
   "name": "server",
   "scripts": {
-    "dev": "wrangler dev",
+    "dev": "wrangler dev src/index.ts",
     "deploy": "wrangler deploy --minify",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {
     "@prisma/client": "^6.10.1",
     "@prisma/extension-accelerate": "^2.0.1",
+    "@sahajsharma01/bb-common": "^1.0.0",
     "hono": "^4.8.3",
     "prisma": "^6.10.1"
   },
   "devDependencies": {
+    "@types/node": "^24.0.4",
     "wrangler": "^4.4.0"
   }
 }
